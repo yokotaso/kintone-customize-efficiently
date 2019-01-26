@@ -68,7 +68,7 @@ module.exports = {
 };
 ```
 
-#### `entry` 
+### `entry` 
 JavaScriptファイルのエントリーポイントのファイルを指定します。
 
 kintoneのJavaScriptカスタマイズでのエントリーポイントは、ラムダ関数が定義、実行されていて `kintone.events.on` メソッドが定義されているファイルです。
@@ -76,7 +76,7 @@ kintoneのJavaScriptカスタマイズでのエントリーポイントは、ラ
 オブジェクトのプロパティ名にはパッケージングの成果物ファイル名を指定します。
 プロパティのバリューにはエントリーポイントのJavaScriptファイルを書きます。
 
-#### `output`
+### `output`
 webpackのパッケージング作業の成果物を出力するディレクトリを指定します。
 
 `path.resolve` や `__dirname` が書かれていますがこれはnode.jsの機能の一部です。webpack.config.jsが配置されているディレクトリに`dist`に出力するという意味になります。
@@ -84,14 +84,14 @@ webpackのパッケージング作業の成果物を出力するディレクト�
 `filename` には出力されるJavaScriptのファイル名を指定することができます。
 特定のファイル名を指定することもできますが`[name]` に`entry` に指定したオブジェクトのプロパティ名が埋め込まれるようになります。
 
-#### `mode`
+### `mode`
 パッケージングするモードを指定することができます。
 
 `development`, `production` , `none`のうちから一つを指定することができます。
 
 productionモードにするとプログラムの圧縮を行ってくれます。
 
-#### `externals`
+### `externals`
 
 kintoneではアップロードできるJavaScriptファイルに容量の制限があります。
 webpackを使うとファイル容量が肥大化します。
