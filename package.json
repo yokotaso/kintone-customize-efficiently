@@ -1,0 +1,27 @@
+{
+  "name": "kintone-customize-efficiently",
+  "version": "0.0.1",
+  "description": "Develop kintone customize with modern web developing tools like ES6, TypeScript, Vue, Webpack",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "docsify serve ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yokotaso/kintone-customize-efficiently.git"
+  },
+  "keywords": [
+    "kintone",
+    "es6",
+    "webpack",
+    "typescript",
+    "vue"
+  ],
+  "author": "Tomoya Yokota",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yokotaso/kintone-customize-efficiently/issues"
+  },
+  "homepage": "https://github.com/yokotaso/kintone-customize-efficiently#readme"
+}

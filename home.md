@@ -1,0 +1,5 @@
+# kintone customzie effciently
+
+kintoneのJavaScriptカスタマイズをnode.jsを利用したツールを使って開発するためのドキュメントです
+
+- webpackを使ってJavaScriptをモジュール化してみよう
