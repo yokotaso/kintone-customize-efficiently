@@ -48,7 +48,7 @@ npmコマンドを使って`moji` ライブラリを追加します
 npm install moji
 ```
 
-実装は./sample-code/src/kintone-create-submit-01.jsを参照してください
+[kintone-create-submit-01.js](./sample-code/src/kintone-create-submit-01.js ':include :type=code')を参照してください
 
 
 ## 6. バリデーション処理を実装する
@@ -70,7 +70,7 @@ not-empty-string.jsを作成します。
 
 JSカスタマイズに実装を追加します。
 
-実装は./sample-code/src/kintone-create-submit.jsを参照してください
+[kintone-create-submit.js](./sample-code/src/kintone-create-submit.js ':include :type=code')を参照してください
 
 ## 7. パッケージングをしてみよう
 
@@ -119,7 +119,7 @@ module.exports = {
 };
 ```
 
-実装は./sample-code/src/kintone-show-add-edit.jsを参照してください
+[kintone-show-add-edit.js](./sample-code/src/kintone-show-add-edit.js ':include :type=code')を参照してください
 
 ## 9. ビルドする
 
