@@ -12,5 +12,6 @@
 - Vueを使ったUI開発
 
 - TypeScriptを使ったカスマイズ
+  - [チュートリアル](doc/typescript/tutorial.md)
 
 - Unit Test

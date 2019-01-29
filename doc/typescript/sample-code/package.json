@@ -1,0 +1,22 @@
+{
+  "name": "sample-code",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "kintone-typlify": "kintone-typlify -u <username> -p <password> --host https://***.cybozu.com --app-id <appId>",
+    "webpack": "webpack"
+  },
+  "author": "Sample code for kintone customize with TypeScript",
+  "license": "MIT",
+  "devDependencies": {
+    "@yokotaso/kintone-typlify": "0.0.6",
+    "ts-loader": "^5.3.3",
+    "typescript": "^3.2.4",
+    "webpack": "^4.29.0",
+    "webpack-cli": "^3.2.1"
+  },
+  "dependencies": {
+    "v8n": "^1.2.3"
+  }
+}
