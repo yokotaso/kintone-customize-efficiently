@@ -13,7 +13,7 @@ npm install -D typescript ts-loader webpack webpack-cli @yokotaso/kintone-typlif
 
 - `ts-loader` : webpackでTypeScriptをJavaScriptに変換するツールです
 - `@yokotaso/kintone-typlify`:  
-kintone上に定義されるグローバルメソッドと指定したアプリから型情報を生成するツールを含んでいます
+kintone上に定義されるグローバルメソッドの型定義と指定したアプリから型情報を生成するツールを含んでいます
 
 ## 2. 型定義ファイルを生成・配置する
 
