@@ -13,7 +13,7 @@ webpackを使ってkintone JavaScriptカスタマイズを実装します。
 
 
 ## 1.npmを使ってプロジェクトの初期化をする
-!> npmがインストールできていない場合は[TODO]() を参照してください
+!> npmがインストールできていない場合は[Node.js](https://nodejs.org/en/) を参照して、ダウンロード、インストールをしてください
 
 npm initを使ってプロジェクトの初期化をします。適当な値を入力してください
 ```
@@ -34,9 +34,15 @@ node_modules/
 dist/
 ```
 
-## 3. webpack.config.jsを編集する
+## 3. webpack.config.jsを作成する
 
-[webpack.config.js](#webpackconfigjsに関する最低限の知識) のentryのパスを修正したファイルをプロジェクト直下に配置します。
+webpackについて知識がない場合は[webpackについて](doc/module/webpack.md) を参考にしてください
+
+次のwebpack.config.jsの設定ファイルをpackage.jsonと同じディレクトリに配置してください
+
+[webpack.config.js](./sample-code/webpack.config01.js ':include :type=code') 
+
+!> 問題: entryを修正して、kintone-customizeのJSファイルをentryの値に設定してください。
 
 ## 4. kintone JavaScriptカスタマイズを開発する
 
@@ -44,11 +50,13 @@ dist/
 
 npmコマンドを使って`moji` ライブラリを追加します
 
-```
+```bash
 npm install moji
 ```
 
-[kintone-create-submit-01.js](./sample-code/src/kintone-create-submit-01.js ':include :type=code')を参照してください
+サンプルコード:
+
+[サンプルコード](./sample-code/src/kintone-create-submit-01.js ':include :type=code')を参照してください
 
 
 ## 6. バリデーション処理を実装する
@@ -64,13 +72,18 @@ npm install v8n
 not-empty-string.jsを作成します。
 次のように空白文字が入力されているかをチェックするモジュールを作成します.
 
-実装は、./sample-code/src/empty-string.jsを参照してください
+empty-string.js:
 
-!> `import`, `default`, `export` などの使い方は[ES6 import](doc/webpack/es6-import)を参照してください。
+[empty-string.js](./sample-code/src/empty-string.js ':include :type=code')を参照してください
+
+!> `import`, `default`, `export` などの使い方は[ES6 import](doc/module/es6-import.md)を参照してください。
 
 JSカスタマイズに実装を追加します。
 
-[kintone-create-submit.js](./sample-code/src/kintone-create-submit.js ':include :type=code')を参照してください
+kintoneのエントリポイント
+
+[サンプルコード](./sample-code/src/kintone-create-submit.js ':include :type=code')
+
 
 ## 7. パッケージングをしてみよう
 
@@ -92,7 +105,7 @@ scriptsにwebpackコマンドを呼び出すコマンドを追加します。
 npm run build
 ```
 
-distディレクトリに青果物が生成されています。
+distディレクトリに成果物が生成されています。
 
 kintoneにアップロードして動作確認してみましょう。
 
@@ -119,9 +132,13 @@ module.exports = {
 };
 ```
 
-[kintone-show-add-edit.js](./sample-code/src/kintone-show-add-edit.js ':include :type=code')を参照してください
+kintone-show-add-edit.js:
+
+[サンプルコード](./sample-code/src/kintone-show-add-edit.js ':include :type=code')を参照してください
 
 ## 9. ビルドする
+
+!> 問題: jQueryをCDNで登録したjQueryを使うようにwebpack.config.jsを修正してください
 
 ```
 npm run build
