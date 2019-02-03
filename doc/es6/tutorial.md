@@ -35,11 +35,9 @@ JavaScriptは文法的な進化だけでなく、標準で使えるライブラ�
 したいと思います。
 たとえば ES2017では オブジェクトの値の一覧を返す`Object.values` というメソッドがあります。
 
-このメソッドはIEでは利用することができません。polyfillライブラリはこのような
-ブラウザ間の標準ライブラリの実装の差を埋めてくれるツールです。
+このメソッドはIEでは利用することができません。polyfillライブラリはこのようなブラウザ間の実装の差を埋めてくれます。
 
-polyfillはbabelに組み込むがことができます。
-
+サンプルコードではwebpackの中でpolyfillを別ファイルにビルドするようにしますが、polyfill.ioをCDNに設定してもよいです
 
 ## 1. プロジェクトの準備
 
@@ -58,3 +56,20 @@ npm install -D babel-loader @babel/core @babel/preset-env webpack webpack-cli
 ## 3. webpack.config.js を作成する
 
 [webpack.config.js](./sample-code/webpack.config.js ':include :type=code')
+
+## 4. テンプレート文字列とVueを使ってカスタム要素を表示してみる
+
+kintone-create-edit-show.js:
+
+[kintone-create-edit-show.js](./sample-code/src/kintone-create-edit-show.js ':include :type=code')
+
+## 5. webpackの出力を確認する
+
+コマンドを実行する:
+
+```
+npm run webpack
+```
+
+kintoneのJSカスタマイズにアップロードする。その後、Developerコンソールでwebpack:下にコードが出力されているので、
+コードが変換されているかを確認してみましょう。

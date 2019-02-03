@@ -3,9 +3,8 @@ const path = require('path');
 module.exports = {
   mode: "development",
   entry: {
-      'kintone-create-edit-show': [
-          './src/kintone-create-edit-show.js'
-        ]
+      'babel-polifill': '@babel/polyfill',
+      'kintone-create-edit-show': './src/kintone-create-edit-show.js'
   },
   module: {
     rules: [
@@ -16,12 +15,9 @@ module.exports = {
           loader: 'babel-loader',
           options: {
             presets: [
-                [
-                    "@babel/preset-env",
-                    {
-                        "useBuiltIns": "entry"
-                    }
-                ]
+              [
+                "@babel/preset-env",
+              ]
             ]
           }
         }
