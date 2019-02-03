@@ -1,11 +1,13 @@
 - [kintone customize effciently](home.md)
 
-- JavaScriptのモジュール化しよう
-  - [チュートリアル](doc/module/tutorial)
-  - [webpackについて](doc/module/webpack)
-  - [ES6のimport/export](doc/module/es6-import)
+- JavaScriptをモジュール化しよう
+  - [チュートリアル](doc/module/tutorial.md)
+  - [webpackについて](doc/module/webpack.md)
+  - [ES6のimport/export](doc/module/es6-import.md)
 
 - ES6 JavaScriptで開発をしよう
+  - [チュートリアル](doc/es6/tutorial.md)
+
 
 - LinterとFormatterを使おう
 

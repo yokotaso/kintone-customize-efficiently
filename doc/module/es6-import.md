@@ -6,93 +6,58 @@
 - [MDN import](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Statements/import)
 
 ## export
-
-エクスポートは名前付きとデフォルトの2つあります。
-
-### 名前つきエクスポート
+基本的には名前つきexportがおすすめ
 
 ```javascript
-// クラスの名前つきエクスポート
-export class ClassA {
-
-}
-
-// const定数の名前つきエクスポート
 export const Constants = {
-    A: "1",
-    B: "2",
-};
+    MAX_LENGTH: 100,
+    MIN_LENGTH: 1,
+}
 
-// functionの名前つきエクスポート
-export function myFunction() {
+export function sampleFunction() {
 
 }
 
-// 宣言とexportを分ける
-const A = 1;
-export A;
+export class SampleClass {
 
-const B = 2;
-const C = 3;
-// リネームもできる
-export {B, C as D};
+}
 ```
 
-### デフォルトエクスポート
+デフォルトexportは名前付きexportに慣れたらドキュメントを自分で調べて使ってみましょう
 
-名前つきエクスポートと同じですが、デフォルトは1つのみです。
-他は名前エクスポートと同じです。
+### 練習問題
 
+1. const変数を名前つきexportをしてください
+2. functionを名前つきexportをしてください
+3. classを名前つきexportをしてください
+
+
+### 答え
 ```javascript
-export default const A = 1;
+export const A = 1;
+export function sampleFunction() {}
+export function class A {}
 ```
 
 ## import
 
-`from` には ファイルへの相対パス(拡張子はなし). 
+名前つきimportは `import {...インポートしたい変数、関数、クラス} from "<相対パス>"` という形で書く。
 
-### 名前つきimport
+またファイル内で変数名が衝突するケースは `as` つかってリネームできる。
 
 ```javascript
-// sample.jsでexport
-export const double = (num) => num + num;
-export const triple = (num) => num * 3;
-
-// 名前つきexportをimportする
-import {double, triple} from './sample';
-double(2); // -> 4
-triple(2); // -> 6
-
-// 名前つきexportをSampleオブジェクトにimportする
-import * as Sample from './sample';
-Sample.double(2); // -> 4
-Sample.triple(2); // -> 6
-
+import {Constants, sampleFunction, SampleClass} from './sample-code'; // 拡張子は不要
+import {Constants as C, sampleFunction as sampleFunction_, SampleClass as SampleClass_} from './sample-code'
 ```
 
-### デフォルトimport
+### 練習問題
+
+1. './constants.js' で A がエクスポートされている importしてください
+2. './sample/sample.js' Aがエクスポートされている。 Bとしてimportしてください
+
+### 答え
 
 ```javascript
-// sample.jsでexport
-export default const myfunc = (num) => num + num;
-
-// importする時に名前を付け直すことができる
-import double from './sample'
-
-double(2); // -> 4
-
-// デフォルトexport
-export default const A = 1;
-export const B = 2;
-// デフォルトimportと名前つきimport
-import MyNumber, {B} from './sample';
-```
-
-### node_moduleをインポートする
-
-webpackなどのツールがモジュールへのパスを解決してくます。
-
-```javascript
-import Vue from 'vue';
-import $ from 'jquery';
+import {A} from './constants';
+import {A as B} from './sample/sample';
 ```

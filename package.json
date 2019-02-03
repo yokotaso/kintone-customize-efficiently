@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/yokotaso/kintone-customize-efficiently/issues"
   },
-  "homepage": "https://github.com/yokotaso/kintone-customize-efficiently#readme"
+  "homepage": "https://github.com/yokotaso/kintone-customize-efficiently#readme",
+  "devDependencies": {
+    "vue": "^2.5.22"
+  }
 }

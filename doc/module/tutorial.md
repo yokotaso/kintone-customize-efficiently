@@ -85,7 +85,6 @@ kintoneのエントリポイント
 [サンプルコード](./sample-code/src/kintone-create-submit.js ':include :type=code')
 
 
-
 ## 7. パッケージングをしてみよう
 
 package.jsonに次のように修正します。
