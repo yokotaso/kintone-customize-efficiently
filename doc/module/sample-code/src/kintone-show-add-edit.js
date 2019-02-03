@@ -3,7 +3,7 @@ import $ from 'jquery';
 (function() {
     var events = [
         "app.record.create.show",
-        "apo.record.edit.show"
+        "app.record.edit.show"
     ];
     kintone.events.on(events, function(event) {
         var button = $('<button />').text("Click me");

@@ -80,7 +80,11 @@ empty-string.js:
 
 JSカスタマイズに実装を追加します。
 
-実装は./sample-code/src/kintone-create-submit.jsを参照してください
+kintoneのエントリポイント
+
+[サンプルコード](./sample-code/src/kintone-create-submit.js ':include :type=code')
+
+
 
 ## 7. パッケージングをしてみよう
 
