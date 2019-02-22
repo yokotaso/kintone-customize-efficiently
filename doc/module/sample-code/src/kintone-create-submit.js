@@ -8,7 +8,7 @@ import {isEmpty} from './empty-string';
     ]
     kintone.events.on(events, function(event) {
         var record = event.record;
-        if(isEmpty.test(record['Text_Field'].value)) {
+        if(isEmpty(record['Text_Field'].value)) {
             record['Text_Field'].error = '必須事項です';
             return event;
         }

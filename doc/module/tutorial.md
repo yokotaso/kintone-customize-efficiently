@@ -6,7 +6,7 @@ webpackを使ってkintone JavaScriptカスタマイズを実装します。
 !> webpackに関しては[webpackについて](doc/webpack/webpack)を参照してください。
 
 1. [moji.js](https://github.com/niwaringo/moji) を使って保存時に文字列フィールドを全角英数を半角英数に変換する
-2. [v8n](https://github.com/imbrn/v8n) を使って空文字をテストするモジュールを作成する
+2. 値の入力が空かを判定するメソッド実装してexportする
 3. (2)のモジュールをインポートして、空文字列の時にエラーにする 
 4. レコード追加画面用のJSカスタマイズを(1)のファイルとは別にwebpackでビルドするようにする
 5. レコード追加画面でカスタマイズしたボタンをjQueryを使って作成(jQueryはCDNから読み込む)
@@ -64,10 +64,6 @@ npm install moji
 次に空白文字列の入力をエラーにする実装を行います
 
 ライブラリの追加:
-
-```
-npm install v8n
-```
 
 not-empty-string.jsを作成します。
 次のように空白文字が入力されているかをチェックするモジュールを作成します.
