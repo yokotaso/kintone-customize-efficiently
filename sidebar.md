@@ -10,8 +10,7 @@
 
 
 - LinterとFormatterを使おう
-
-- Vueを使ったUI開発
+  - [チュートリアル](doc/linter/linter.md)
 
 - TypeScriptを使ったカスマイズ
   - [チュートリアル](doc/typescript/tutorial.md)
