@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/yokotaso/kintone-customize-efficiently#readme",
   "devDependencies": {
+    "docsify-cli": "^4.3.0",
     "vue": "^2.5.22"
   }
 }
